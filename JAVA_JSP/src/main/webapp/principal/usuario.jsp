@@ -47,7 +47,7 @@
 														<h4 class="sub-title">Cadastro De Usuário</h4>
 
 														<form class="form-material"
-															enctype="multipar/form-data"
+															enctype="multipart/form-data"
 															action="<%=request.getContextPath()%>/ServeletUsuarioControler"
 															method="post" id="formUser">
 
