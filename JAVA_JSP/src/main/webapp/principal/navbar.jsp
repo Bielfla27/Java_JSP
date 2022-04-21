@@ -53,8 +53,8 @@
                               </a>
                               <ul class="show-notification">
                                   <li>
-                                      <h6>Notifications</h6>
-                                      <label class="label label-danger">New</label>
+                                      <h6>Novidades</h6>
+                                      <label class="label label-danger">Novo</label>
                                   </li>
                                   <li class="waves-effect waves-light">
                                       <div class="media">
@@ -96,28 +96,8 @@
                               </a>
                               <ul class="show-notification profile-notification">
                                   <li class="waves-effect waves-light">
-                                      <a href="#!">
-                                          <i class="ti-settings"></i> Settings
-                                      </a>
-                                  </li>
-                                  <li class="waves-effect waves-light">
-                                      <a href="user-profile.html">
-                                          <i class="ti-user"></i> Profile
-                                      </a>
-                                  </li>
-                                  <li class="waves-effect waves-light">
-                                      <a href="email-inbox.html">
-                                          <i class="ti-email"></i> My Messages
-                                      </a>
-                                  </li>
-                                  <li class="waves-effect waves-light">
-                                      <a href="auth-lock-screen.html">
-                                          <i class="ti-lock"></i> Lock Screen
-                                      </a>
-                                  </li>
-                                  <li class="waves-effect waves-light">
                                       <a href="<%= request.getContextPath() %>/ServletLogin?acao=logout">
-                                          <i class="ti-layout-sidebar-left"></i> Logout
+                                          <i class="ti-layout-sidebar-left"></i> Sair
                                       </a>
                                   </li>
                               </ul>
