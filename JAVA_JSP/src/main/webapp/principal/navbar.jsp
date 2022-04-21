@@ -90,7 +90,6 @@
                           </li>
                           <li class="user-profile header-notification">
                               <a href="#!" class="waves-effect waves-light">
-                                  <img src="<%= request.getContextPath() %>/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
                                   <span><%= session.getAttribute("usuario") %></span>
                                   <i class="ti-angle-down"></i>
                               </a>
