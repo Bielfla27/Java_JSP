@@ -11,7 +11,6 @@ CREATE DATABASE "Java-jsp"
 -- Table: public.model_login
 
 -- DROP TABLE IF EXISTS public.model_login;
-
 CREATE TABLE IF NOT EXISTS public.model_login
 (
     login character varying(200) COLLATE pg_catalog."default" NOT NULL,
@@ -25,6 +24,12 @@ CREATE TABLE IF NOT EXISTS public.model_login
     usuario_id bigint NOT NULL DEFAULT 1,
     fotouser text COLLATE pg_catalog."default",
     extensaofotouser character varying(10) COLLATE pg_catalog."default",
+    cep character varying(250) COLLATE pg_catalog."default",
+    logradouro character varying(250) COLLATE pg_catalog."default",
+    bairro character varying(250) COLLATE pg_catalog."default",
+    localidade character varying(250) COLLATE pg_catalog."default",
+    uf character varying(250) COLLATE pg_catalog."default",
+    numero character varying(250) COLLATE pg_catalog."default",
     CONSTRAINT model_login_pkey PRIMARY KEY (id),
     CONSTRAINT login_unique UNIQUE (login),
     CONSTRAINT usuario_fk FOREIGN KEY (usuario_id)
