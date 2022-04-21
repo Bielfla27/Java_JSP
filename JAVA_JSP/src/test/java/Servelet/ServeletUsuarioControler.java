@@ -44,6 +44,7 @@ public class ServeletUsuarioControler extends ServeletGenericUtil {
 				request.setAttribute("modelLogins", modelLogins);
 				
 				request.setAttribute("msg", "Excluido com sucesso!");
+				request.setAttribute("totalPagina", daoUsuario.totalPagina(this.getUserlogado(request)));
 				request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
 				
 			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("deletarajax")) {
@@ -79,6 +80,7 @@ public class ServeletUsuarioControler extends ServeletGenericUtil {
 				
 				request.setAttribute("msg", "Usuário Carregados");
 				request.setAttribute("modelLogins", modelLogins);
+				request.setAttribute("totalPagina", daoUsuario.totalPagina(this.getUserlogado(request)));
 				request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
 				
 				
@@ -94,6 +96,7 @@ public class ServeletUsuarioControler extends ServeletGenericUtil {
 			}else {
 				List<ModelLogin> modelLogins = daoUsuario.consultaUsuarioList(super.getUserlogado(request));
 				request.setAttribute("modelLogins", modelLogins);
+				request.setAttribute("totalPagina", daoUsuario.totalPagina(this.getUserlogado(request)));
 				request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
 			}
 			
@@ -165,6 +168,7 @@ public class ServeletUsuarioControler extends ServeletGenericUtil {
 			request.setAttribute("modelLogins", modelLogins);
 			request.setAttribute("msg", msg);
 			request.setAttribute("modelLogin", modelLogin);
+			request.setAttribute("totalPagina", daoUsuario.totalPagina(this.getUserlogado(request)));
 			request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
 
 		} catch (Exception e) {
