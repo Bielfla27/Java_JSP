@@ -115,7 +115,7 @@ public class DAOUsuarioRepository {
 		return retorno;		
 	}
 	
-	public List<ModelLogin> consultaUsuarioListPaginada(Long userLogado, Integer offset) throws SQLException{
+	public List<ModelLogin> consultaUsuarioListPaginado(Long userLogado, Integer offset) throws SQLException{
 			
 			List<ModelLogin> retorno = new ArrayList<ModelLogin>();
 			
@@ -321,6 +321,8 @@ public class DAOUsuarioRepository {
 		 PreparedStatement preparedSql = connection.prepareStatement(sql);
 	
 		 ResultSet resultado = preparedSql.executeQuery();
+		 
+		 resultado.next();
 		 
 		 Double cadastros = resultado.getDouble("total");
 		 Double porpagina = 5.0;
