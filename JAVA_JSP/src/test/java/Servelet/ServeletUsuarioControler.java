@@ -70,15 +70,16 @@ public class ServeletUsuarioControler extends ServeletGenericUtil {
 				List<ModelLogin> modelLogins = daoUsuario.consultaUsuarioList(super.getUserlogado(request));
 				request.setAttribute("modelLogins", modelLogins);
 
-				request.setAttribute("msg", "Usu√°rio em edi√ß√£o");
+				request.setAttribute("msg", "Usu·rio em ediÁ„o");
 				request.setAttribute("modelLogin", modelLogin);
+				request.setAttribute("totalPagina", daoUsuario.totalPagina(this.getUserlogado(request)));
 				request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);
 				
 			}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("listarUser")) {
 				
 				List<ModelLogin> modelLogins = daoUsuario.consultaUsuarioList(super.getUserlogado(request));
 				
-				request.setAttribute("msg", "Usu√°rio Carregados");
+				request.setAttribute("msg", "Usu·rio Carregados");
 				request.setAttribute("modelLogins", modelLogins);
 				request.setAttribute("totalPagina", daoUsuario.totalPagina(this.getUserlogado(request)));
 				request.getRequestDispatcher("principal/usuario.jsp").forward(request, response);

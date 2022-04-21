@@ -55,6 +55,7 @@ public class ServeletLogin extends HttpServlet {
 					modellogin = daoUsuarioRepository.consultaUsuarioLogado(login);
 					request.getSession().setAttribute("usuario", modellogin.getLogin());
 					request.getSession().setAttribute("perfil", modellogin.getPerfil());
+					request.getSession().setAttribute("imagemUser", modellogin.getFotouser());
 					
 					if(url == null || url.equals("null")) {
 						url = "principal/Principal.jsp";
